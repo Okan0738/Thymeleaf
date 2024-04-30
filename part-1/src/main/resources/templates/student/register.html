@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Okan</title>
+</head>
+<body>
+<h2 th:text="${student.get(0).firstname}"></h2>
+<h2 th:text="${student.get(0).lastName}"></h2>
+
+<h2 th:text="${ 'Hello guys' +' '+ student.get(0).firstname}"> </h2>
+<h2 th:text="${student.get(0).firstname + ' ' + student.get(0).lastName}"> </h2>
+
+</body>
+</html>
