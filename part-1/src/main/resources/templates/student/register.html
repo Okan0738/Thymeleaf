@@ -5,11 +5,30 @@
     <title>Okan</title>
 </head>
 <body>
+<!--Display Value of model-->
 <h2 th:text="${student.get(0).firstname}"></h2>
 <h2 th:text="${student.get(0).lastName}"></h2>
-
+<!--Concatenation-->
 <h2 th:text="${ 'Hello guys' +' '+ student.get(0).firstname}"> </h2>
 <h2 th:text="${student.get(0).firstname + ' ' + student.get(0).lastName}"> </h2>
+
+<!--Link-->
+<h2>
+<a th:href="@{https://comu.academia.edu/okançelik}"> Academia Page </a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome}"> Welcome </a>
+</h2>
+
+<!--Adding Parameters in Link-->
+<h2>
+    <a th:href="@{/student/welcome(id=3)}"> Link1 </a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome(name=${student.get(0).firstname})}"> Link2 </a>
+</h2>
 
 </body>
 </html>
